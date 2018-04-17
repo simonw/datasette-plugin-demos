@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = '0.1'
+VERSION = '0.2'
 
 setup(
     name='datasette-plugin-demos',
@@ -9,11 +9,16 @@ setup(
     url='https://github.com/simonw/datasette-plugin-demos',
     license='Apache License, Version 2.0',
     version=VERSION,
-    py_modules=['datasette_plugin_demos'],
+    packages=['datasette_plugin_demos'],
     entry_points={
         'datasette': [
             'plugin_demos = datasette_plugin_demos'
         ]
+    },
+    package_data={
+        'datasette_plugin_demos': [
+            'static/plugin.js',
+        ],
     },
     install_requires=['datasette']
 )
