@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = '0.2'
+VERSION = '0.3'
 
 setup(
     name='datasette-plugin-demos',
@@ -18,6 +18,9 @@ setup(
     package_data={
         'datasette_plugin_demos': [
             'static/plugin.js',
+        ],
+        'datasette_plugin_demos': [
+            'templates/show_json.html',
         ],
     },
     install_requires=['datasette']
