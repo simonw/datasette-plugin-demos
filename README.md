@@ -1,16 +1,35 @@
 # datasette-plugin-demos
 
-Examples of plugins for Datasette.
+[![PyPI](https://img.shields.io/pypi/v/datasette-plugin-demos.svg)](https://pypi.org/project/datasette-plugin-demos/)
+[![Changelog](https://img.shields.io/github/v/release/simonw/datasette-plugin-demos?label=changelog)](https://github.com/simonw/datasette-plugin-demos/releases)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/datasette-plugin-demos/blob/master/LICENSE)
 
-The plugins feature is currently extremely unstable and under active development -
-see https://github.com/simonw/datasette/issues/14
+Examples of plugins for Datasette
 
-This repository will host example plugins as the feature develops. It also means
-I can ship a package to PyPI to ensure plugin registration works as intended.
+This repository hosts an example showing how Datasette plugins can be structured and packaged.
 
-## How to release
+## Installation
 
-First, bump the VERSION in `setup.py`
+Install this plugin in the same environment as Datasette.
 
-    python3 setup.py sdist
-    twine upload dist/*
+    $ pip install datasette-plugin-demos
+
+## Development
+
+To set up this plugin locally, first checkout the code. Then create a new virtual environment:
+
+    cd datasette-plugin-demos
+    python3 -mvenv venv
+    source venv/bin/activate
+
+Or if you are using `pipenv`:
+
+    pipenv shell
+
+Now install the dependencies and tests:
+
+    pip install -e '.[test]'
+
+To run the tests:
+
+    pytest

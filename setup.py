@@ -15,4 +15,6 @@ setup(
         "datasette_plugin_demos": ["static/plugin.js", "templates/show_json.html"],
     },
     install_requires=["datasette"],
+    extras_require={"test": ["pytest", "pytest-asyncio", "httpx"]},
+    tests_require=["datasette-plugin-demos[test]"],
 )
